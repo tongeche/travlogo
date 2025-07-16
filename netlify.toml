@@ -1,12 +1,17 @@
-[dev]
- 
-  functions = "netlify/functions"
-
-[dev.environment]
-    SUPABASE_URL = "https://nopjtemdidrqxfjlyotc.supabase.co"
-    SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcGp0ZW1kaWRycXhmamx5b3RjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0MTY0NTMsImV4cCI6MjA2Nzk5MjQ1M30.hKBGivZPwdZo7Yx1zYu4OcduZQqDc1-SoUII97aFkps"
-
 [build]
-  publish = "public"  
-  command = "npm run build" 
-  functions = "netlify/functions"
+  command = "npm install && npm run build" # Use 'npm run build' now that it's defined
+  publish = "./" # Publish from the root directory
+
+# Optional: if you have specific redirects or headers (keep your existing ones)
+[[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
