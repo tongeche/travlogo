@@ -27,3 +27,5 @@ yarn-debug.log*
 .idea/
 *.sublime-project
 *.sublime-workspace
+# Local Netlify folder
+.netlify
