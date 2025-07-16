@@ -1,14 +1,5 @@
-// js/main.js
-// ──────────────────────────────────────────────────────────────────────────────
-// 1) Alpine.js via native ESM import
-import Alpine from "alpinejs";
-window.Alpine = Alpine;
-Alpine.start();
+import { createClient } from '@supabase/supabase-js';
 
-// 2) Supabase client via native ESM import
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-// 3) Your own modules
 import { fetchConfig }   from '../config.js';
 import HotelsService     from '../services/HotelsService.js';
 import ToursService      from '../services/ToursService.js';
@@ -17,13 +8,12 @@ import TabsController    from '../controllers/TabsController.js';
 import TrainsService     from '../services/TrainsService.js'; // This is correct
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // 4) Load your Supabase credentials
-  const { SUPABASE_URL, SUPABASE_KEY } = await fetchConfig();
+ 
+  const supabase = createClient(
+    import.meta.env.VITE_SUPABASE_URL,
+    import.meta.env.VITE_SUPABASE_KEY
+  );
 
-  // 5) Create *one* Supabase client instance
-  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-  // 6) Instantiate your services, passing in the shared client
   const hotels  = new HotelsService(supabase, {
     outputSel: '#hotels-output',
     gridSel:   '#hotels-grid'

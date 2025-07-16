@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Your One-Stop Travel and Booking Website",
   "main": "index.js",
-  "scripts": {
-    "start": "npm run watch:tailwind",
-    "build:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --minify",
-    "build:js": "esbuild js/src/main.js --bundle --minify --outfile=./js/main.js --external:alpinejs",
-    "build": "npm run build:css && npm run build:js"
-  },
+"scripts": {
+  "start": "npm run watch:tailwind",
+  "build:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --minify",
+  "build:js": "esbuild js/src/main.js --bundle --minify --outfile=./js/main.js--define:import.meta.env.VITE_SUPABASE_URL='\"'+process.env.VITE_SUPABASE_URL+'\"' \\--define:import.meta.env.VITE_SUPABASE_KEY='\"'+process.env.VITE_SUPABASE_KEY+'\"'",
+  "build": "npm run build:css && npm run build:js"
+},
+
   "keywords": [
     "travel",
     "booking",
