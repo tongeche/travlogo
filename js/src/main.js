@@ -1,7 +1,7 @@
 // js/main.js
 // ──────────────────────────────────────────────────────────────────────────────
 // 1) Alpine.js via native ESM import
-import Alpine from 'https://unpkg.com/alpinejs?module';
+import Alpine from "alpinejs";
 window.Alpine = Alpine;
 Alpine.start();
 
@@ -9,12 +9,12 @@ Alpine.start();
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
 // 3) Your own modules
-import { fetchConfig }   from './config.js';
-import HotelsService     from './services/HotelsService.js';
-import ToursService      from './services/ToursService.js';
-import FlightsService    from './services/FlightsService.js';
-import TabsController    from './controllers/TabsController.js';
-import TrainsService     from './services/TrainsService.js'; // This is correct
+import { fetchConfig }   from '../config.js';
+import HotelsService     from '../services/HotelsService.js';
+import ToursService      from '../services/ToursService.js';
+import FlightsService    from '../services/FlightsService.js';
+import TabsController    from '../controllers/TabsController.js';
+import TrainsService     from '../services/TrainsService.js'; // This is correct
 
 document.addEventListener('DOMContentLoaded', async () => {
   // 4) Load your Supabase credentials
