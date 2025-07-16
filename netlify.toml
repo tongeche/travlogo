@@ -1,0 +1,12 @@
+[dev]
+  # Tell `netlify dev` where your functions are
+  functions = "netlify/functions"
+
+[dev.environment]
+    SUPABASE_URL = "https://nopjtemdidrqxfjlyotc.supabase.co"
+    SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcGp0ZW1kaWRycXhmamx5b3RjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0MTY0NTMsImV4cCI6MjA2Nzk5MjQ1M30.hKBGivZPwdZo7Yx1zYu4OcduZQqDc1-SoUII97aFkps"
+
+[build]
+  publish = "public"  # Netlify will deploy the content of the 'public' folder
+  command = "npm run build" # The command Netlify will run to compile CSS
+  functions = "netlify/functions"
