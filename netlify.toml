@@ -1,17 +1,20 @@
 [build]
-  command = "npm install && npm run build" # Use 'npm run build' now that it's defined
-  publish = "./" # Publish from the root directory
+  # Install dependencies and run your CSS+JS build
+  command   = "npm install && npm run build"
+  # Serve directly from the project root
+  publish   = "./"
+  # (Optional) Netlify Functions folder
+  functions = "netlify/functions"
 
-# Optional: if you have specific redirects or headers (keep your existing ones)
 [[redirects]]
-  from = "/old-path"
-  to = "/new-path"
+  from   = "/old-path"
+  to     = "/new-path"
   status = 301
 
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "no-referrer-when-downgrade"
+    Referrer-Policy        = "no-referrer-when-downgrade"
