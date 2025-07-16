@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Your One-Stop Travel and Booking Website",
   "main": "index.js",
-  "scripts": {
-    "build:tailwind": "tailwindcss -i ./src/input.css -o ./public/dist/output.css",
-    "watch:tailwind": "tailwindcss -i ./src/input.css -o ./public/dist/output.css --watch",
+  "scripts": {    
+ 
     "start": "npm run watch:tailwind",
-    "build": "npm run build:tailwind",
-    "dev:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --watch",
     "build:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --minify",
-    "build:js": "esbuild js/main.js --bundle --outfile=public/js/bundle.js --minify"
+    "build:js": "esbuild js/main.js --bundle --outfile=./js/main.js --minify",
+    "build": "npm run build:css && npm run build:js",    
+    "dev:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --watch"
   },
   "keywords": [
     "travel",
