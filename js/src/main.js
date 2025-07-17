@@ -5,7 +5,7 @@ import HotelsService     from '../services/HotelsService.js';
 import ToursService      from '../services/ToursService.js';
 import FlightsService    from '../services/FlightsService.js';
 import TabsController    from '../controllers/TabsController.js';
-import TrainsService     from '../services/TrainsService.js'; // This is correct
+import TrainsService     from '../services/TrainsService.js'; 
 
 document.addEventListener('DOMContentLoaded', async () => {
  

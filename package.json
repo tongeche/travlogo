@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "Your One-Stop Travel and Booking Website",
   "main": "index.js",
-"scripts": {
-  "start": "npm run watch:tailwind",
-  "build:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --minify",
-  "build:js": "esbuild js/src/main.js --bundle --minify --outfile=./js/main.js--define:import.meta.env.VITE_SUPABASE_URL='\"'+process.env.VITE_SUPABASE_URL+'\"' \\--define:import.meta.env.VITE_SUPABASE_KEY='\"'+process.env.VITE_SUPABASE_KEY+'\"'",
-  "build": "npm run build:css && npm run build:js"
-},
-
+  "scripts": {
+    "start": "npm run watch:tailwind",
+    "build:css": "tailwindcss -i ./css/src/styles.css -o ./css/main.css --minify",
+    "build:js": "esbuild js/src/main.js --bundle --minify --outfile=js/main.js --define:import.meta.env.VITE_SUPABASE_URL=\\\"$VITE_SUPABASE_URL\\\" --define:import.meta.env.VITE_SUPABASE_KEY=\\\"$VITE_SUPABASE_KEY\\\"",
+    "build": "npm run build:css && npm run build:js"
+  },
   "keywords": [
     "travel",
     "booking",
@@ -35,7 +34,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "@supabase/supabase-js": "^2.51.0",
+    "@supabase/supabase-js": "^2.52.0",
     "alpinejs": "^3.14.9",
     "dotenv": "^17.2.0",
     "node-fetch": "^3.3.2"

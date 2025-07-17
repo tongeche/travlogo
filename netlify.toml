@@ -3,7 +3,11 @@
   command   = "npm install && npm run build"
   # Serve directly from the project root
   publish   = "./"
-  # (Optional) Netlify Functions folder
+
+  [build.environment]
+  VITE_SUPABASE_URL = "https://nopjtemdidrqxfjlyotc.supabase.co"
+  VITE_SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vcGp0ZW1kaWRycXhmamx5b3RjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0MTY0NTMsImV4cCI6MjA2Nzk5MjQ1M30.hKBGivZPwdZo7Yx1zYu4OcduZQqDc1-SoUII97aFkps"
+
   functions = "netlify/functions"
 
 [[redirects]]
