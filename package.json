@@ -36,6 +36,7 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@supabase/supabase-js": "^2.52.0",
     "alpinejs": "^3.14.9",
+    "amadeus": "^11.0.0",
     "dotenv": "^17.2.0",
     "node-fetch": "^3.3.2"
   },

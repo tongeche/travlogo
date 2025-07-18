@@ -23,10 +23,7 @@
   <script type="module" src="/js/main.js" defer></script>
 </head>
 
-<header
-  x-data="{ open: false }"
-  class="bg-[#eb8934] text-white sticky top-0 z-50 shadow"
->
+<header x-data="{ open: false }" class="bg-[#eb8934] text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="flex-shrink-0 font-bold text-xl tracking-wide">
@@ -34,25 +31,18 @@
       </a>
 
       <div class="hidden sm:flex sm:items-center sm:space-x-4">
-        <button
-          class="p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-          aria-label="Change language"
-        >
+        <button class="p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Change language">
           <i class="fas fa-globe"></i>
         </button>
-        <button
-          class="p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-          aria-label="Account"
-        >
+        <button class="p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Account">
           <i class="fas fa-user-circle"></i>
         </button>
       </div>
 
-      <button
-        class="sm:hidden p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-        @click="open = true"
-        aria-label="Open menu"
-      >
+      <button class="sm:hidden p-2 rounded hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+        @click="open = true" aria-label="Open menu">
         <i class="fas fa-bars text-xl"></i>
       </button>
     </div>
@@ -62,11 +52,9 @@
 
     <div class="flex items-center justify-between px-4 h-16 border-b">
       <span class="font-bold text-lg">Menu</span>
-      <button
-        @click="open = false"
+      <button @click="open = false"
         class="p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#eb8934]"
-        aria-label="Close menu"
-      >
+        aria-label="Close menu">
         <i class="fas fa-times text-xl"></i>
       </button>
     </div>
@@ -78,13 +66,10 @@
       <a href="#best-flight-deals" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-100">
         <i class="fas fa-plane text-xl"></i> <span>Flights</span>
       </a>
-      <a
-        href="#best-hotel-deals"
-        class="flex items-center space-x-3 p-3 rounded hover:bg-gray-100 bg-[#ffece0]"
-      >
+      <a href="#best-hotel-deals" class="flex items-center space-x-3 p-3 rounded hover:bg-gray-100 bg-[#ffece0]">
         <i class="fas fa-bed text-xl text-[#eb8934]"></i> <span class="font-medium text-[#eb8934]">Hotels</span>
       </a>
-      </nav>
+    </nav>
 
     <div class="px-4 pt-6 border-t space-y-4">
       <button class="w-full flex items-center space-x-3 p-3 rounded hover:bg-gray-100">
@@ -113,8 +98,10 @@
     ">
 
     <div class="text-center max-w-md">
-      <h2 class="text-3xl font-extrabold text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Vacation &amp; Hotel</h2>
-      <p class="text-lg text-white mt-2" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">A perfect match for your travel dreams</p>
+      <h2 class="text-3xl font-extrabold text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Vacation &amp;
+        Hotel</h2>
+      <p class="text-lg text-white mt-2" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">A perfect match for your
+        travel dreams</p>
     </div>
 
     <div class="
@@ -123,6 +110,7 @@
         flex flex-col sm:flex-row items-center
         gap-4
       ">
+      <form action="">
       <div class="flex-grow flex flex-col sm:flex-row sm:flex-nowrap gap-4 w-full">
         <div class="flex-1">
           <label class="block text-sm text-gray-500 mb-1">From</label>
@@ -132,7 +120,7 @@
 
         <div class="flex-1">
           <label class="block text-sm text-gray-500 mb-1">To</label>
-          <input type="text" placeholder="Where do you want to go?"
+          <input type="text" placeholder="Porto (PRT)"
             class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-orange-300 h-10 placeholder-gray-500" />
         </div>
 
@@ -147,85 +135,90 @@
           <input type="text" placeholder="2 travelers • 1 room"
             class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-orange-300 h-10 placeholder-gray-500" />
         </div>
+        <button type="submit" class="
+        flex items-center justify-center
+        bg-[#eb8934] hover:bg-orange-600 text-white font-semibold
+        rounded-md px-3 py-2 h-10
+        transition w-auto sm:w-auto lg:w-40 flex-shrink-0
+      ">
+      <i class="fas fa-search mr-2" aria-hidden="true"></i>
+      <span>Search</span>
+    </button>
       </div>
 
-      <button type="submit" class="
-          flex items-center justify-center
-          bg-[#eb8934] hover:bg-orange-600 text-white font-semibold
-          rounded-md px-6 py-2 h-10
-          transition w-auto sm:w-auto lg:w-40 flex-shrink-0
-        ">
-        <i class="fas fa-search mr-2" aria-hidden="true"></i>
-        <span>Search</span>
-      </button>
+
     </div>
+  </form>
   </div>
+  </div>
+  
 </section>
 
 <body class="bg-gray-50 font-sans">
   <!-- SIDEBAR: fixed, below header -->
   <nav
-  class="hidden lg:flex flex-col fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 bg-white border-r border-gray-200 shadow-lg z-40 overflow-y-auto">
-  <ul class="mt-6">
-    <li id="hotels">
-      <a href="#perfect-holiday"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-hotel w-5 text-gray-600"></i>
-        <span class="ml-3 text-sm">Hotels</span>
+    class="hidden lg:flex flex-col fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 bg-white border-r border-gray-200 shadow-lg z-40 overflow-y-auto">
+    <ul class="mt-6">
+      <li id="hotels">
+        <a href="#perfect-holiday"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-hotel w-5 text-gray-600"></i>
+          <span class="ml-3 text-sm">Hotels</span>
         </a>
-    </li>
-    <li>
-      <a href="#best-deals-flights"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-plane w-5 text-gray-600"></i><span class="ml-3 text-sm">Flights</span></a>
-    </li>
-    <li>
-      <a href="#best-deals-trains"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-train w-5 text-gray-600"></i><span class="ml-3 text-sm">Trains</span></a>
-    </li>
-    
-    <li>
-      <a href="#tours"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-landmark w-5 text-gray-600"></i><span class="ml-3 text-sm">Attractions &amp;
-          Tours</span></a>
-    </li>
+      </li>
+      <li>
+        <a href="#best-deals-flights"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-plane w-5 text-gray-600"></i><span class="ml-3 text-sm">Flights</span></a>
+      </li>
+      <li>
+        <a href="#best-deals-trains"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-train w-5 text-gray-600"></i><span class="ml-3 text-sm">Trains</span></a>
+      </li>
 
-    <li>
-      <a href="#cruises"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-ship w-5 text-gray-600"></i><span class="ml-3 text-sm">Cruises</span></a>
-    </li>
- 
-    <li>
-      <a href="#insurance"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-shield w-5 text-gray-600"></i><span class="ml-3 text-sm">Insurance</span></a>
-    </li>
-    <li>
-      <a href="#inspiration"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-lightbulb w-5 text-gray-600"></i><span class="ml-3 text-sm">Travel Inspiration</span></a>
-    </li>
-    <li>
-      <a href="#map"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-map w-5 text-gray-600"></i><span class="ml-3 text-sm">Map</span></a>
-    </li>
-    <li>
-      <a href="#deals"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-tags w-5 text-gray-600"></i><span class="ml-3 text-sm">Deals</span></a>
-    </li>
-    <li>
-      <a href="#rewards"
-        class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
-        <i class="fa-solid fa-gift w-5 text-gray-600"></i><span class="ml-3 text-sm">Travlog Rewards</span></a>
-    </li>
+      <li>
+        <a href="#tours"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-landmark w-5 text-gray-600"></i><span class="ml-3 text-sm">Attractions &amp;
+            Tours</span></a>
+      </li>
 
-  </ul>
-</nav>
+      <li>
+        <a href="#cruises"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-ship w-5 text-gray-600"></i><span class="ml-3 text-sm">Cruises</span></a>
+      </li>
+
+      <li>
+        <a href="#insurance"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-shield w-5 text-gray-600"></i><span class="ml-3 text-sm">Insurance</span></a>
+      </li>
+      <li>
+        <a href="#inspiration"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-lightbulb w-5 text-gray-600"></i><span class="ml-3 text-sm">Travel
+            Inspiration</span></a>
+      </li>
+      <li>
+        <a href="#map"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-map w-5 text-gray-600"></i><span class="ml-3 text-sm">Map</span></a>
+      </li>
+      <li>
+        <a href="#deals"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-tags w-5 text-gray-600"></i><span class="ml-3 text-sm">Deals</span></a>
+      </li>
+      <li>
+        <a href="#rewards"
+          class="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+          <i class="fa-solid fa-gift w-5 text-gray-600"></i><span class="ml-3 text-sm">Travlog Rewards</span></a>
+      </li>
+
+    </ul>
+  </nav>
   <main class="lg:ml-60">
 
     <!-- perfect holiday -->
@@ -235,8 +228,8 @@
         <p class="mt-2 text-gray-600">
           Take a break from work and soak up the sun at one of our hottest vacation destinations
         </p>
-        </div>
-    
+      </div>
+
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg">
@@ -247,9 +240,9 @@
               <p class="text-sm text-gray-600">
                 Build a beach holiday package to suit your every need. Life is better on the beach!
               </p>
-              </div>
+            </div>
           </div>
-    
+
           <div class="bg-white rounded-xl overflow-hidden shadow-lg">
             <img src="/public/images/places/beach-holiday.png" alt="All Inclusive Holidays"
               class="w-full h-48 object-cover rounded-t-xl" />
@@ -261,7 +254,7 @@
               </p>
             </div>
           </div>
-    
+
           <div class="bg-white rounded-xl overflow-hidden shadow-lg">
             <img src="/public/images/places/romantic-holiday.jpg" alt="Romantic Holidays"
               class="w-full h-48 object-cover rounded-t-xl" />
@@ -272,108 +265,191 @@
               </p>
             </div>
           </div>
-    
+
         </div>
       </div>
     </section>
 
     <!-- Popular Searches -->
     <section id="popular-searches" class="my-16 px-6">
+      <!-- Section header + Category Tabs -->
       <div class="max-w-6xl mx-auto mb-8">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Popular searches</h2>
-        <div class="flex border-b border-gray-200">
-          <button class="px-4 py-2 text-[#eb8934] border-b-2 border-[#eb8934] font-medium focus:outline-none">
-            Cities
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Popular searches
+        </h2>
+
+        <!-- Category Tabs -->
+        <nav id="search-categories"
+          class="flex overflow-x-auto space-x-4 px-2 sm:px-6 py-2 bg-white shadow-sm rounded-lg">
+          <!-- 1. Hotels -->
+          <button id="tab-hotels" data-cat="hotels"
+            class="flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-[#eb8934] text-[#eb8934] focus:outline-none">
+            <i class="fas fa-hotel text-lg mb-1"></i>
+            <span class="text-sm font-medium">Hotels</span>
           </button>
-          <button class="px-4 py-2 text-gray-600 hover:text-gray-800 hover:border-gray-300 border-b-2 border-transparent focus:outline-none">
-            Destinations
+
+          <!-- 2. Flights -->
+          <button id="tab-flights" data-cat="flights"
+            class="flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-plane text-lg mb-1"></i>
+            <span class="text-sm font-medium">Flights</span>
           </button>
-          <div class="flex-grow flex justify-end items-center">
-            <button class="p-2 text-gray-500 hover:text-gray-700">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
+
+          <!-- 3. Trains -->
+          <button id="tab-trains" data-cat="trains"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-train text-lg mb-1"></i>
+            <span class="text-sm font-medium">Trains</span>
+          </button>
+
+          <!-- 4. Attractions -->
+          <button id="tab-attractions" data-cat="attractions"
+            class="flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-landmark text-lg mb-1"></i>
+            <span class="text-sm font-medium">Attractions</span>
+          </button>
+
+          <!-- 5. Cruises -->
+          <button id="tab-cruises" data-cat="cruises"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-ship text-lg mb-1"></i>
+            <span class="text-sm font-medium">Cruises</span>
+          </button>
+
+          <!-- 6. Insurance -->
+          <button id="tab-insurance" data-cat="insurance"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-shield-alt text-lg mb-1"></i>
+            <span class="text-sm font-medium">Insurance</span>
+          </button>
+
+          <!-- 7. Inspiration -->
+          <button id="tab-inspiration" data-cat="inspiration"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-lightbulb text-lg mb-1"></i>
+            <span class="text-sm font-medium">Inspiration</span>
+          </button>
+
+          <!-- 8. Map -->
+          <button id="tab-map" data-cat="map"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-map text-lg mb-1"></i>
+            <span class="text-sm font-medium">Map</span>
+          </button>
+
+          <!-- 9. Deals -->
+          <button id="tab-deals" data-cat="deals"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-tag text-lg mb-1"></i>
+            <span class="text-sm font-medium">Deals</span>
+          </button>
+
+          <!-- 10. Stays -->
+          <button id="tab-other-stays" data-cat="other-stays"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-bed text-lg mb-1"></i>
+            <span class="text-sm font-medium">Stays</span>
+          </button>
+
+          <!-- 11. Things to Do -->
+          <button id="tab-things-to-do" data-cat="things-to-do"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-map-marked-alt text-lg mb-1"></i>
+            <span class="text-sm font-medium">Things to Do</span>
+          </button>
+
+          <!-- 12. Tips & Inspiration -->
+          <button id="tab-tips-inspiration" data-cat="tips-inspiration"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-info-circle text-lg mb-1"></i>
+            <span class="text-sm font-medium">Tips & Inspiration</span>
+          </button>
+
+          <!-- 13. Nightlife -->
+          <button id="tab-nightlife" data-cat="nightlife"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-music text-lg mb-1"></i>
+            <span class="text-sm font-medium">Nightlife</span>
+          </button>
+
+          <!-- 14. Boat & Cruz -->
+          <button id="tab-boat-cruz" data-cat="boat-cruz"
+            class="hidden sm:flex flex-col items-center whitespace-nowrap px-3 py-2 border-b-2 border-transparent text-gray-600 hover:text-gray-800 hover:border-gray-300 focus:outline-none">
+            <i class="fas fa-anchor text-lg mb-1"></i>
+            <span class="text-sm font-medium">Boat & Cruz</span>
+          </button>
+        </nav>
       </div>
-    
+
+      <!-- Grid of Popular Items -->
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Lisbon -->
           <div class="bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition">
             <img src="/public/images/places/lisbon.jpg" alt="Lisbon" class="w-full h-40 object-cover rounded-t-xl" />
             <div class="p-4">
               <h3 class="font-semibold text-gray-800 mb-1">Lisbon</h3>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">2,362</span> Hotels
-              </p>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">€220</span> Avg.
-              </p>
-              </div>
+
+            </div>
           </div>
-    
+
+          <!-- Albufeira -->
           <div class="bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition">
-            <img src="/public/images/places/albufeira-place.jpg" alt="Albufeira" class="w-full h-40 object-cover rounded-t-xl" />
+            <img src="/public/images/places/albufeira-place.jpg" alt="Albufeira"
+              class="w-full h-40 object-cover rounded-t-xl" />
             <div class="p-4">
               <h3 class="font-semibold text-gray-800 mb-1">Albufeira</h3>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">908</span> Hotels
-              </p>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">€342</span> Avg.
-              </p>
+
             </div>
           </div>
-    
+
+          <!-- Monte Gordo -->
           <div class="bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition">
-            <img src="/public/images/places/monte-gordo.jpg" alt="Monte Gordo" class="w-full h-40 object-cover rounded-t-xl" />
+            <img src="/public/images/places/monte-gordo.jpg" alt="Monte Gordo"
+              class="w-full h-40 object-cover rounded-t-xl" />
             <div class="p-4">
               <h3 class="font-semibold text-gray-800 mb-1">Monte Gordo</h3>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">43</span> Hotels
-              </p>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">€313</span> Avg.
-              </p>
+
             </div>
           </div>
-    
+
+          <!-- Porto -->
           <div class="bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition">
             <img src="/public/images/places/porto.jpg" alt="Porto" class="w-full h-40 object-cover rounded-t-xl" />
             <div class="p-4">
               <h3 class="font-semibold text-gray-800 mb-1">Porto</h3>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">1,226</span> Hotels
-              </p>
-              <p class="text-sm text-gray-600">
-                <span class="font-medium">€195</span> Avg.
-              </p>
+
             </div>
           </div>
-    
         </div>
       </div>
     </section>
 
+
+
+
     <!-- Section Shell -->
-    <section id="hotels" class="py-8 bg-gray-50"">
-      <div class=" max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-4">Hotels & Homes </h1>
 
-      <!-- Placeholder for dynamic grid -->
-      <div id="hotels-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- JS will inject cards here -->
-      </div>
 
-   
+    <section id="hotels" class="py-8 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <div class=" max-w-6xl mx-auto">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Hotels & Homes</h2>
+
+
+        <div id="hotels-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Placeholder for dynamic grid -->
+
+          <!-- JS will inject cards here -->
+        </div>
+
+
     </section>
 
-     <!-- flights -->
-    <section id="flights" class="py-8">
-      <div class="max-w-4xl mx-auto px-6">
-        <!-- 1. Popular Flight Destinations -->
-        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          Popular Flight Destinations
-        </h1>
+    <!-- flights -->
+    <section id="flights" class="py-8 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Flight Destinations</h2>
 
         <!-- Horizontal Scroll Cards -->
         <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
@@ -401,6 +477,22 @@
               <span class="text-white text-center font-medium px-2">Lisbon Flights</span>
             </div>
           </a>
+          <a href="#" class="relative flex-shrink-0 w-48 h-64 rounded-xl overflow-hidden">
+            <img src="/public/images/flights/paris-flights.jpg" alt="Lisbon Flights"
+              class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span class="text-white text-center font-medium px-2">Paris Flights</span>
+            </div>
+          </a>
+          <a href="#" class="relative flex-shrink-0 w-48 h-64 rounded-xl overflow-hidden">
+            <img src="/public/images/flights/porto-flights.jpg" alt="Lisbon Flights"
+              class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span class="text-white text-center font-medium px-2">Porto Flights</span>
+            </div>
+          </a>
+
+
 
 
 
@@ -414,293 +506,141 @@
 
 
         </div>
-
-        <!-- 2. Feature Highlights -->
-        <div class="max-w-4xl mx-auto px-6 py-12">
-          <!-- Feature 1 -->
-          <section id="marketing-hero-card" class="container mx-auto px-4 py-8">
-            <div class="max-w-3xl mx-auto"> <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="/public/images/places/all-inclusive-beach.png" alt="City or Nature"
-                  class="w-full h-48 object-cover" />
-                <div class="p-6">
-                  <p class="text-xs text-gray-600 mb-1">Looking for holidays in the USA?</p>
-                  <h3 class="text-lg font-semibold text-gray-800">
-                    City or Nature? Wherever you wish to go!
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <hr class="my-8 border-gray-200"> <section id="marketing-themed-cards" class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
-              Explore by Interest
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="/public/images/places/algarve.jpg" alt="Beach Escapes"
-                  class="w-full h-40 object-cover" /> <div class="p-4"> <h3 class="text-md font-semibold text-gray-800 mb-1">
-                    Beach Escapes
-                  </h3>
-                  <p class="text-xs text-gray-600 mb-2">Sun-Kissed Shores & Turquoise Waters.</p>
-                  <a href="#beach-hotels" class="inline-block text-blue-600 hover:underline text-sm">
-                    Discover More <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                  </a>
-                </div>
-              </div>
-          
-              <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="/public/images/places/explore.jpg" alt="City Breaks"
-                  class="w-full h-40 object-cover" /> <div class="p-4"> <h3 class="text-md font-semibold text-gray-800 mb-1">
-                    City Breaks
-                  </h3>
-                  <p class="text-xs text-gray-600 mb-2">Vibrant Culture & Urban Adventures.</p>
-                  <a href="#city-hotels" class="inline-block text-blue-600 hover:underline text-sm">
-                    Find Your City <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                  </a>
-                </div>
-              </div>
-          
-              <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="/public/images/places/mountain-hike-adventure.jpg" alt="Adventure & Nature"
-                  class="w-full h-40 object-cover" /> <div class="p-4"> <h3 class="text-md font-semibold text-gray-800 mb-1">
-                    Nature & Adventure
-                  </h3>
-                  <p class="text-xs text-gray-600 mb-2">Unplug and Reconnect with the Outdoors.</p>
-                  <a href="#nature-stays" class="inline-block text-blue-600 hover:underline text-sm">
-                    Start Exploring <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
+      </div>
     </section>
 
     <!-- Best-Flights-deals Section -->
     <section id="best-deals-flights" class="py-14 bg-gray-50">
 
       <div class="max-w-4xl mx-auto px-6">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Best Flight Deals</h1>
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-          <img src="public/images/places/rome.jpg" alt="Airline Miles" class="w-full h-48 object-cover" />
-          <div class="p-6">
-            <p class="text-xs text-gray-600 mb-1">Get more to travel more</p>
-            <h3 class="text-lg font-semibold text-gray-800">
-              Find flight deals and get double points on top of airline miles
-            </h3>
-          </div>
-        </div>
 
-        <div class="max-w-4xl mx-auto px-6">
-
-
-
-        </div>
 
         <div id="flights-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-3">
           <!-- Cards will be injected here -->
         </div>
 
       </div>
-    </section>  
-      <!-- Best Train Deals Section -->
-    <section id="best-deals-trains" class="py-8 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-6">
-    
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 ">Best Train Deals</h1>
-    
-        <div class="mb-12"> <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-102 transition-transform duration-300">
-            <img
-              src="public/images/places/train_booking.jpg"
-              alt="Train Booking Deals: Get more to travel more"
-              class="w-full h-48 object-cover object-top"
-            />
+    </section>
+    <!-- Best Train Deals Section -->
+
+    <section id="best-deals-trains" class="py-8 bg-gray-50 px-4 sm:px-6 lg:px-4">
+      <div class=" max-w-6xl mx-auto">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Best Train Deals</h2>
+
+        <div class="mb-12">
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-102 transition-transform duration-300">
+            <img src="public/images/places/train_booking.jpg" alt="Train Booking Deals: Get more to travel more"
+              class="w-full h-48 object-cover object-top" />
             <div class="p-6">
               <p class="text-xs text-gray-600 mb-1">Get more to travel more</p>
               <h3 class="text-lg font-semibold text-gray-800">
                 Find train deals and get double points on top of airline miles
               </h3>
-              <a href="#book-trains" class="mt-4 inline-block text-blue-600 hover:text-blue-800 transition-colors duration-200">
+              <a href="#book-trains"
+                class="mt-4 inline-block text-blue-600 hover:text-blue-800 transition-colors duration-200">
                 Book Your Train Now <i class="fas fa-arrow-right ml-1 text-sm"></i>
               </a>
             </div>
           </div>
         </div>
-    
+
         <hr class="my-8 border-gray-200" aria-hidden="true">
-    
-         
+
+
         <div id="trains-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-3">
-          </div>
-    
-        <div id="trains-output" class="mt-8 text-center text-gray-500"></div>
-    
-      </div> 
-    </section>
-     <!-- Tours Section -->
-     <section id="tours" x-data="{ tab: 'tab1' }" class="py-12">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Other recommended activities</h2>
-    
-        <div class="hidden sm:block mb-6">
-          <div class="flex space-x-4 border-b border-gray-200 mb-4">
-            <button @click="tab = 'tab1'" :class="tab==='tab1'
-                ? 'border-b-4 border-[#eb8934] text-[#eb8934]'
-                : 'border-b-4 border-transparent text-gray-600 hover:text-[#eb8934]'"
-              class="tab-button flex items-center font-medium text-sm py-2 px-4 focus:outline-none"
-              data-tag="other_stays">
-              <i class="fas fa-hotel mr-1"></i>
-              Other Stays
-            </button>
-    
-            <button @click="tab = 'tab3'" :class="tab==='tab3'
-                ? 'border-b-4 border-[#eb8934] text-[#eb8934]'
-                : 'border-b-4 border-transparent text-gray-600 hover:text-[#eb8934]'"
-              class="tab-button flex items-center font-medium text-sm py-2 px-4 focus:outline-none"
-              data-tag="things_to_do">
-              <i class="fas fa-suitcase mr-1"></i>
-              Things to Do
-            </button>
-    
-            <button @click="tab = 'tab4'" :class="tab==='tab4'
-                ? 'border-b-4 border-[#eb8934] text-[#eb8934]'
-                : 'border-b-4 border-transparent text-gray-600 hover:text-[#eb8934]'"
-              class="tab-button flex items-center font-medium text-sm py-2 px-4 focus:outline-none"
-              data-tag="tips_inspiration">
-              <i class="fas fa-lightbulb mr-1"></i> Tips &amp; Inspiration
-            </button>
-    
-            <button @click="tab = 'tab5'" :class="tab==='tab5'
-                ? 'border-b-4 border-[#eb8934] text-[#eb8934]'
-                : 'border-b-4 border-transparent text-gray-600 hover:text-[#eb8934]'"
-              class="tab-button flex items-center font-medium text-sm py-2 px-4 focus:outline-none"
-              data-tag="nightlife">
-              <i class="fas fa-music mr-1"></i> Nightlife
-            </button>
-    
-            <button @click="tab = 'tab6'" :class="tab==='tab6'
-                ? 'border-b-4 border-[#eb8934] text-[#eb8934]'
-                : 'border-b-4 border-transparent text-gray-600 hover:text-[#eb8934]'"
-              class="tab-button flex items-center font-medium text-sm py-2 px-4 focus:outline-none"
-              data-tag="boat_cruz">
-              <i class="fas fa-ship mr-1"></i> Boat &amp; Cruz
-            </button>
-          </div>
         </div>
-    
-        <div id="tours-grid" class="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          </div>
-    
-        <div id="tours-carousel" class="sm:hidden overflow-x-auto snap-x snap-mandatory flex space-x-4 px-4 pb-8 mb-6">
-          </div>
-    
-        <div id="tours-output" class="mt-8 text-center text-gray-500"></div>
-    
+
+        <div id="trains-output" class="mt-8 text-center text-gray-500"></div>
+
       </div>
     </section>
 
-    
 
-   
-       
     <section id="subscribe" class="bg-[#f0f9fa] py-16 px-6">
-        <div class="max-w-2xl mx-auto text-center">
-          <!-- Icon -->
-          <div class="flex justify-center mb-6">
-            <i class="fas fa-envelope-open-text text-[#eb8934] text-6xl"></i>
-          </div>
-
-          <!-- Headline -->
-          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-3">
-            Subscribe to our Newsletter
-          </h2>
-          <p class="text-gray-600 mb-6">
-            Be the first to receive exclusive travel deals, tips, and updates directly to your inbox.
-          </p>
-
-
-          <!-- Form -->
-          <form class="flex flex-col sm:flex-row items-center gap-4 justify-center max-w-md mx-auto">
-            <input type="email" placeholder="Your email address" required
-              class="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-300 text-sm w-full" />
-            <button type="submit"
-              class="bg-[#eb8934] hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-md transition text-sm">
-              Subscribe
-            </button>
-          </form>
-
-          <!-- Legal Note -->
-          <p class="text-xs text-gray-500 mt-6 px-4">
-            By subscribing, you agree to receive occasional emails with updates, promotions, and travel inspiration.
-            You can unsubscribe anytime. Read our <a href="#" class="underline">Privacy Policy</a>.
-          </p>
+      <div class="max-w-2xl mx-auto text-center">
+        <!-- Icon -->
+        <div class="flex justify-center mb-6">
+          <i class="fas fa-envelope-open-text text-[#eb8934] text-6xl"></i>
         </div>
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-3">
+          Subscribe to our Newsletter
+        </h2>
+        <p class="text-gray-600 mb-6">
+          Be the first to receive exclusive travel deals, tips, and updates directly to your inbox.
+        </p>
+
+
+        <!-- Form -->
+        <form class="flex flex-col sm:flex-row items-center gap-4 justify-center max-w-md mx-auto">
+          <input type="email" placeholder="Your email address" required
+            class="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-300 text-sm w-full" />
+          <button type="submit"
+            class="bg-[#eb8934] hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-md transition text-sm">
+            Subscribe
+          </button>
+        </form>
+
+        <!-- Legal Note -->
+        <p class="text-xs text-gray-500 mt-6 px-4">
+          By subscribing, you agree to receive occasional emails with updates, promotions, and travel inspiration.
+          You can unsubscribe anytime. Read our <a href="#" class="underline">Privacy Policy</a>.
+        </p>
+      </div>
     </section>
 
-      <!-- FOOTER -->
-      <footer class="bg-gray-100 text-gray-700 py-8 mt-20">
-        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          <!-- Contact Us -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-gray-900 transition">Customer Support</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Service Guarantee</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">More Service Info</a></li>
-            </ul>
-            <div class="flex space-x-4 mt-4">
-              <a href="#" class="text-gray-500 hover:text-gray-900 transition"><i
-                  class="fa-brands fa-facebook-f"></i></a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 transition"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 transition"><i class="fa-solid fa-link"></i></a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 transition"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-          </div>
-          <!-- About -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">About</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-gray-900 transition">About Travlog</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">News</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Careers</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Terms &amp; Conditions</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Privacy Statement</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Accessibility Statement</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Do Not Sell My Personal Information</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">About Travlog Group</a></li>
-            </ul>
-          </div>
-          <!-- Other Services -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Other Services</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-gray-900 transition">Investor Relations</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Travlog Rewards</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Affiliate Program</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">List Your Property</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">All Hotels</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Become a Supplier</a></li>
-              <li><a href="#" class="hover:text-gray-900 transition">Security</a></li>
-            </ul>
-          </div>
-          <!-- Payments & Partners -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Payment Methods</h4>
-            <div class="flex flex-wrap gap-4 text-2xl text-gray-600">
-              <i class="fab fa-cc-apple hover:text-black transition" title="Apple Pay"></i>
-              <i class="fab fa-cc-paypal hover:text-blue-600 transition" title="PayPal"></i>
-              <i class="fab fa-cc-mastercard hover:text-red-600 transition" title="Mastercard"></i>
-              <i class="fab fa-cc-visa hover:text-blue-500 transition" title="Visa"></i>
-              <i class="fab fa-cc-amex hover:text-blue-800 transition" title="Amex"></i>
-              <i class="fab fa-cc-discover hover:text-orange-600 transition" title="Discover"></i>
-            </div>
+    <!-- FOOTER -->
+    <footer class="bg-gray-100 text-gray-700 py-8 mt-20">
+      <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Contact Us -->
 
-          </div>
+        <!-- About -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">About</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-900 transition">About Travlog</a></li>
+            <li><a href="#" class="hover:text-gray-900 transition">News</a></li>
+
+            <li><a href="#" class="hover:text-gray-900 transition">Terms &amp; Conditions</a></li>
 
 
-      </footer>
+            <li><a href="#" class="hover:text-gray-900 transition">Customer Support</a></li>
+
+
+          </ul>
+        </div>
+        <!-- Other Services -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Other Services</h4>
+          <ul class="space-y-2">
+
+            <li><a href="#" class="hover:text-gray-900 transition">Travlog Rewards</a></li>
+            <li><a href="#" class="hover:text-gray-900 transition">Affiliate Program</a></li>
+            <li><a href="#" class="hover:text-gray-900 transition">List Your Property</a></li>
+
+
+            <li><a href="#" class="hover:text-gray-900 transition">Security</a></li>
+          </ul>
+        </div>
+        <!-- Payments & Partners -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Payment Methods</h4>
+          <div class="flex flex-wrap gap-4 text-2xl text-gray-600">
+            <i class="fab fa-cc-apple hover:text-black transition" title="Apple Pay"></i>
+            <i class="fab fa-cc-paypal hover:text-blue-600 transition" title="PayPal"></i>
+            <i class="fab fa-cc-mastercard hover:text-red-600 transition" title="Mastercard"></i>
+            <i class="fab fa-cc-visa hover:text-blue-500 transition" title="Visa"></i>
+            <i class="fab fa-cc-amex hover:text-blue-800 transition" title="Amex"></i>
+            <i class="fab fa-cc-discover hover:text-orange-600 transition" title="Discover"></i>
+          </div>
+
+        </div>
+
+
+    </footer>
   </main>
 
 
