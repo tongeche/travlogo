@@ -24,7 +24,7 @@ export default class HotelsService {
           locations:location_id ( city, country )
         `)
         .eq('service_type', 'hotel')
-        .limit(10);
+        .limit(3);
 
       if (error) throw error;
 
@@ -133,47 +133,45 @@ export default class HotelsService {
         <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-700 hover:text-red-500 transition z-10">
           <i class="far fa-heart"></i>
         </button>
-    `; // Ensured z-index for icon to be above other badges
+    `; 
 
     return `
-      <div class="relative flex flex-col rounded-xl overflow-hidden shadow hover:shadow-lg transition group bg-white">
-        <div class="relative overflow-hidden">
-          <img
-            src="${imageUrl}"
-            alt="${h.name || 'Hotel Image'}"
-            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
-          ${highlyRatedBadge}
-          ${topRightRatingBadge}
-          <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-700 hover:text-red-500 transition z-10">
-            <i class="far fa-heart"></i>
-          </button>
-        </div>
-
-        <div class="p-4 flex-grow flex flex-col">
-          <h3 class="text-xl font-bold text-gray-800 mb-1">${h.name || 'Hotel Name'}</h3>
-          <p class="text-gray-600 text-sm mb-2">${locationDisplay}</p>
-          ${h.description ? `
-            <p class="text-sm text-gray-500 mb-2 leading-tight">${h.description.substring(0, 100)}${h.description.length > 100 ? '...' : ''}</p>
-          ` : '<p class="text-sm text-gray-500 mb-2 leading-tight">No description available.</p>'}
-          <div class="mt-auto pt-2 border-t border-gray-100">
-         
-         
-             </div>
-
-    <div class="mt-4 text-center"> ${h.price_min !== null && h.price_min !== undefined ? `
-    <p class="text-lg font-bold text-gray-800 mb-2">${priceDisplay}</p> ` : ``}
-  <a
-    href="${h.affiliate_url || '#'}"
-    target="_blank"
-    class="inline-flex bg-[#eb8934] text-white font-semibold px-4 py-2  hover:bg-orange-600 transition items-center" >
-    Show prices
-  
-  </a>
-</div>
+    <div data-card class="snap-start flex-shrink-0 w-80 relative flex flex-col rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white">
+      <div class="relative overflow-hidden">
+        <img
+          src="${imageUrl}"
+          alt="${h.name || 'Hotel'}"
+          class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        ${topRightBadge}
+      </div>
+      <div class="p-4 flex-grow flex flex-col">
+        <h3 class="text-xl font-bold text-gray-800 mb-1">${h.name || 'Hotel Name'}</h3>
+        <p class="text-gray-600 text-sm mb-2">${locationDisplay}</p>
+        <p class="text-sm text-gray-500 mb-2 leading-tight">
+          ${h.description
+            ? h.description.substring(0,100) + (h.description.length>100?'…':'')
+            : 'No description available.'}
+        </p>
+        <div class="mt-auto pt-2 border-t border-gray-100 text-center">
+          ${priceDisplay
+            ? `<p class="text-lg font-bold text-gray-800 mb-2">${priceDisplay}</p>`
+            : ''
+          }
+          <a
+            href="${h.affiliate_url || '#'}"
+            target="_blank"
+            class="inline-flex bg-[#eb8934] text-white font-semibold px-4 py-2 hover:bg-orange-600 transition"
+          >
+            Show prices
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
         </div>
       </div>
-    `;
-  }
+    </div>
+  `;
 }
+
+}
+

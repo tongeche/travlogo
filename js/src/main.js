@@ -6,6 +6,8 @@ import ToursService      from '../services/ToursService.js';
 import FlightsService    from '../services/FlightsService.js';
 import TabsController    from '../controllers/TabsController.js';
 import TrainsService     from '../services/TrainsService.js'; 
+import HotelSearchFormService from '../services/HotelSearchFormService.js'; 
+
 
 document.addEventListener('DOMContentLoaded', async () => {
  
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     outputSel: '#trains-output',
     gridSel:   '#trains-grid'
   });
+  new HotelSearchFormService('hotelSearchForm', 'hotelResults');
 
 
   // 7) Load & render data
